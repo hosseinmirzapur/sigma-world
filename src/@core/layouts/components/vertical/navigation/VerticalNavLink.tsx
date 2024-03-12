@@ -150,9 +150,9 @@ const VerticalNavLink = ({
               ...(navCollapsed && !navHover ? { mr: 0 } : { mr: 2 }),
               ...(parent ? { ml: 1.5, mr: 3.5 } : {}), // This line should be after (navCollapsed && !navHover) condition for proper styling
               '& svg': {
-                fontSize: '0.625rem',
-                ...(!parent ? { fontSize: '1.375rem' } : {}),
-                ...(parent && item.icon ? { fontSize: '0.875rem' } : {})
+                fontSize: 22,
+                ...(!parent ? { fontSize: 20 } : {}),
+                ...(parent && item.icon ? { fontSize: 18 } : {})
               }
             }}
           >

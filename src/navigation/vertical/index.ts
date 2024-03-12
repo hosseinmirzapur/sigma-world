@@ -12,11 +12,12 @@ const navigation = (): VerticalNavItemsType => {
           path: '/dashboards/analytics',
           icon: 'tabler:brand-google-analytics'
         },
-        {
-          title: 'CRM',
-          path: '/dashboards/crm',
-          icon: 'tabler:heart-rate-monitor'
-        },
+
+        // {
+        //   title: 'CRM',
+        //   path: '/dashboards/crm',
+        //   icon: 'tabler:heart-rate-monitor'
+        // },
         {
           title: 'فروشگاه',
           path: '/dashboards/ecommerce',
