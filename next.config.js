@@ -15,5 +15,8 @@ module.exports = {
     }
 
     return config
+  },
+  images: {
+    domains: ['https://hosseinmirzapur.github.io/sigma-world']
   }
 }
