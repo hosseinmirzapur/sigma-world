@@ -6,7 +6,7 @@ const path = require('path')
 // Remove this if you're not using Fullcalendar features
 
 module.exports = {
-  trailingSlash: false,
+  trailingSlash: true,
   reactStrictMode: false,
   webpack: config => {
     config.resolve.alias = {
