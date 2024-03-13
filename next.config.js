@@ -17,6 +17,13 @@ module.exports = {
     return config
   },
   images: {
-    domains: ['https://hosseinmirzapur.github.io/sigma-world']
+    domains: ['https://hosseinmirzapur.github.io/sigma-world'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'hosseinmirzapur.github.io',
+        pathname: '/sigma-world'
+      }
+    ]
   }
 }
