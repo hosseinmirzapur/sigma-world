@@ -58,7 +58,7 @@ interface Order {
   submit_number: string
   submit_date: string | Date
   expire_date: string | Date
-  status: 'pending' | 'pending' | 'docs_verified' | 'completed'
+  status: 'pending' | 'prepaid' | 'docs_verified' | 'completed'
 }
 
 interface Row {
@@ -98,7 +98,7 @@ const OrdersList = () => {
         separator={<Icon icon={'tabler:chevron-left'} />}
       >
         <Link underline='hover' color='inherit' href='#'>
-          خدمات
+          کاربران
         </Link>
         <Link underline='hover' color='inherit' href='#' aria-current='page'>
           سفارشات

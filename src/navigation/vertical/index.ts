@@ -4,67 +4,51 @@ import { VerticalNavItemsType } from 'src/@core/layouts/types'
 const navigation = (): VerticalNavItemsType => {
   const items: VerticalNavItemsType = [
     {
-      title: 'داشبورد ها',
+      title: 'داشبورد',
       icon: 'tabler:smart-home',
-      children: [
-        {
-          title: 'آمار',
-          path: '/dashboards/analytics',
-          icon: 'tabler:brand-google-analytics'
-        },
-
-        // {
-        //   title: 'CRM',
-        //   path: '/dashboards/crm',
-        //   icon: 'tabler:heart-rate-monitor'
-        // },
-        {
-          title: 'فروشگاه',
-          path: '/dashboards/ecommerce',
-          icon: 'tabler:basket'
-        }
-      ]
+      path: '/dashboards/ecommerce'
     },
     {
-      title: 'خدمات',
-      icon: 'tabler:stack-3',
-      children: [
-        {
-          title: 'سفارشات',
-          icon: 'tabler:truck-delivery',
-          path: '/services/orders'
-        },
-        {
-          title: 'پروانه صادراتی',
-          icon: 'tabler:certificate-2',
-          path: '/services/certificates'
-        },
-        {
-          title: 'ابطال تعهد ارزی',
-          icon: 'tabler:map-cancel',
-          path: '/services/agreement-cancellation'
-        },
-        {
-          title: 'ساتا',
-          icon: 'tabler:report-money',
-          path: '/services/sata'
-        },
-        {
-          title: 'کارت بازرگانی',
-          icon: 'tabler:id',
-          path: '/services/merchants'
-        },
-        {
-          title: 'مجوز های قانونی',
-          icon: 'tabler:gavel',
-          path: '/services/legal'
-        },
-        {
-          title: 'پروفرما',
-          icon: 'tabler:file-invoice',
-          path: '/services/proforma-invoices'
-        }
-      ]
+      sectionTitle: 'کاربران'
+    },
+    {
+      title: 'سفارشات',
+      icon: 'tabler:truck-delivery',
+      path: '/services/orders'
+    },
+    {
+      sectionTitle: 'ادمین ها'
+    },
+    {
+      title: 'مدیریت ادمین ها',
+      icon: 'tabler:users',
+      path: '#'
+    },
+    {
+      title: 'نقش ها و سطوح دسترسی',
+      icon: 'tabler:license',
+      path: '#'
+    },
+    {
+      sectionTitle: 'اعلانات'
+    },
+    {
+      title: 'مدیریت اعلانات',
+      icon: 'tabler:bell',
+      path: '#'
+    },
+    {
+      sectionTitle: 'فرم ها'
+    },
+    {
+      title: 'مدیریت فرم ها',
+      icon: 'tabler:news',
+      path: '#'
+    },
+    {
+      title: 'فرم ساز',
+      icon: 'tabler:wand',
+      path: '#'
     }
   ]
 
