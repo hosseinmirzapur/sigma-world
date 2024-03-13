@@ -1,11 +1,40 @@
+/* Webfont: Yekan */
+@import 'typeface-yekan';
+
+@font-face {
+  font-family: 'Yekan';
+  src: url('Yekan.eot'); /* IE9 Compat Modes */
+  src: url('Yekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('Yekan.woff2') format('woff2'),
+    /* Modern Browsers */ url('Yekan.woff') format('woff'), /* Modern Browsers */ url('Yekan.otf') format('opentype'),
+    /* Open Type Font */ url('Yekan.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+* {
+  font-family: 'Yekan' sans-serif !important;
+}
+
 html,
 body {
   min-height: 100%;
-  font-family: Vazirmatn, sans-serif;
+  font-family: 'Yekan' sans-serif !important;
 }
+/* Webfont: Yekan */
 
 #__next {
   height: 100%;
+  font-family: 'Yekan' sans-serif !important;
 }
 
 code {

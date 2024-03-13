@@ -4565,6 +4565,11 @@ typed-array-length@^1.0.4:
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
 
+typeface-yekan@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/typeface-yekan/-/typeface-yekan-1.0.11.tgz#16ed5042c06b82e518fced1257e6728ae4479097"
+  integrity sha512-TsewmyzVWJ0Fi97gI5+uBvOP4B8AhT9s6gkvhgLL0zSCfNl4tplK6hXgRjREn7ybSQ+CEl6ak15aCjVfeb1VJA==
+
 typescript@5.0.4:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"

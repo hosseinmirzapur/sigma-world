@@ -1,14 +1,9 @@
-'use state'
-
 import { Icon } from '@iconify/react'
 import {
   Breadcrumbs,
-  Button,
   Card,
   CardContent,
   Link,
-  Menu,
-  MenuItem,
   Paper,
   Table,
   TableBody,
@@ -18,33 +13,33 @@ import {
   TableRow
 } from '@mui/material'
 import { GridColDef } from '@mui/x-data-grid'
-import { useState } from 'react'
+import OptionsMenu from 'src/@core/components/option-menu'
 
 const columns: GridColDef[] = [
   {
     field: 'doc_number',
     headerName: 'شماره پرونده',
-    maxWidth: 200
+    maxWidth: 250
   },
   {
     field: 'submit_number',
     headerName: 'شماره ثبت سفارش',
-    maxWidth: 200
+    maxWidth: 250
   },
   {
     field: 'submit_date',
     headerName: 'تاریخ ثبت سفارش',
-    maxWidth: 200
+    maxWidth: 150
   },
   {
     field: 'expire_date',
     headerName: 'تاریخ اعتبار سفارش',
-    maxWidth: 200
+    maxWidth: 150
   },
   {
     field: 'status',
     headerName: 'وضعیت سفارش',
-    maxWidth: 200
+    maxWidth: 100
   },
   {
     field: 'action',
@@ -80,15 +75,6 @@ const rows: Row[] = [
 ]
 
 const OrdersList = () => {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
-  const open = Boolean(anchorEl)
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
-
   return (
     <>
       <Breadcrumbs
@@ -114,7 +100,6 @@ const OrdersList = () => {
                     <TableCell
                       key={column.field}
                       style={{
-                        fontSize: '15px',
                         fontWeight: 'bold'
                       }}
                     >
@@ -132,63 +117,24 @@ const OrdersList = () => {
                     <TableCell>{row.order.expire_date as string}</TableCell>
                     <TableCell>{row.order.status}</TableCell>
                     <TableCell>
-                      <Button
-                        aria-controls={open ? 'basic-menu' : undefined}
-                        aria-haspopup='true'
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}
-                      >
-                        <Icon icon={row.icon} fontSize={20} />
-                      </Button>
-
-                      <Menu
-                        id='basic-menu'
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={handleClose}
-                        MenuListProps={{
-                          'aria-labelledby': 'basic-button'
-                        }}
-                        anchorOrigin={{
-                          vertical: 'top',
-                          horizontal: 'left'
-                        }}
-                        transformOrigin={{
-                          vertical: 'top',
-                          horizontal: 'left'
-                        }}
-                      >
-                        <MenuItem
-                          onClick={handleClose}
-                          style={{
-                            display: 'flex',
-                            gap: '10px'
-                          }}
-                        >
-                          <Icon icon={'tabler:eye'} fontSize={16} />
-                          <span>مشاهده جزییات</span>
-                        </MenuItem>
-                        <MenuItem
-                          onClick={handleClose}
-                          style={{
-                            display: 'flex',
-                            gap: '10px'
-                          }}
-                        >
-                          <Icon icon={'tabler:edit'} fontSize={16} />
-                          <span>ویرایش</span>
-                        </MenuItem>
-                        <MenuItem
-                          onClick={handleClose}
-                          style={{
-                            display: 'flex',
-                            gap: '10px'
-                          }}
-                        >
-                          <Icon icon={'tabler:trash'} />
-                          <span>حذف</span>
-                        </MenuItem>
-                      </Menu>
+                      <OptionsMenu
+                        iconButtonProps={{ size: 'small' }}
+                        menuProps={{ sx: { '& .MuiMenuItem-root svg': { mr: 2 } } }}
+                        options={[
+                          {
+                            text: 'مشاهده جزییات',
+                            icon: <Icon icon={'tabler:eye'} fontSize={'1.25rem'} />
+                          },
+                          {
+                            text: 'ویرایش',
+                            icon: <Icon icon='tabler:pencil' fontSize='1.25rem' />
+                          },
+                          {
+                            text: 'حذف',
+                            icon: <Icon icon='tabler:trash' fontSize='1.25rem' />
+                          }
+                        ]}
+                      />
                     </TableCell>
                   </TableRow>
                 ))}
