@@ -17,7 +17,6 @@ module.exports = {
     return config
   },
   images: {
-    domains: ['https://hosseinmirzapur.github.io/sigma-world'],
-    unoptimized: true
+    domains: ['hosseinmirzapur.github.io/sigma-world']
   }
 }
