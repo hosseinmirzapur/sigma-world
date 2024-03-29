@@ -6,14 +6,14 @@ import quickAccessItems from "./quicks"
 
 const Footer = () => {
    return (
-      <div className="absolute bottom-0 w-full pb-10">
-         <div className="flex justify-between items-center w-11/12 md:w-10/12 mx-auto">
+      <div className="absolute bottom-0 w-full pb-10 bg-primary text-secondary pt-10">
+         <div className="flex flex-col md:flex-row justify-between items-center w-11/12 md:w-10/12 mx-auto gap-5">
             {/* About */}
             <div className="flex flex-col w-full">
-               <h1 className="font-semibold text-center underline underline-offset-8">
+               <h1 className="text-lg md:text-2xl font-semibold md:text-center">
                   ارتباط با ما
                </h1>
-               <div className="flex flex-col gap-5 w-10/12 mt-10">
+               <div className="flex flex-col gap-5 w-11/12 md:w-10/12 mt-10">
                   <div>
                      <h5>آدرس دفتر مرکزی:</h5>
                      <p>
@@ -45,7 +45,7 @@ const Footer = () => {
             </div>
             {/* Quick Access */}
             <div className="flex flex-col w-full">
-               <h1 className="font-semibold text-center underline underline-offset-8">
+               <h1 className="text-lg md:text-2xl font-semibold md:text-center">
                   دسترسی سریع
                </h1>
                <div className="grid grid-cols-2 mt-10 gap-10 w-11/12 mx-auto">

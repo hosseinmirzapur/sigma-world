@@ -1,26 +1,19 @@
 "use client"
 
 import * as React from "react"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import navItems, { NavItem } from "./navigations"
+import Link from "next/link"
+import navItems from "./navigations"
 import { RxHamburgerMenu } from "react-icons/rx"
 import AppLogo from "./AppLogo"
-import { useRouter } from "next/navigation"
 import {
    Accordion,
    AccordionItem,
    AccordionTrigger,
+   AccordionContent,
 } from "@/components/ui/accordion"
-import Link from "next/link"
-import { AccordionContent } from "@radix-ui/react-accordion"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 const MobileHeader = () => {
-   const router = useRouter()
-
-   const handleNavigation = (item: NavItem) => {
-      router.push(item.href)
-   }
-
    return (
       <div className="md:hidden flex justify-between">
          <Sheet>

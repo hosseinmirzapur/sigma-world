@@ -2,8 +2,6 @@
 
 import * as React from "react"
 
-import Link from "next/link"
-
 import { cn } from "@/lib/utils"
 import {
    NavigationMenu,
@@ -25,22 +23,28 @@ export function HeaderComponent() {
    }
 
    return (
-      <div className="hidden md:flex w-full py-5 px-2 justify-between">
+      <div className="hidden md:flex w-full py-5 px-2 justify-between bg-primary text-secondary">
          <AppLogo />
          <NavigationMenu dir="rtl">
             <NavigationMenuList>
                {navItems.map((item, index) => (
-                  <NavigationMenuItem key={index}>
+                  <NavigationMenuItem
+                     className="bg-primary text-secondary"
+                     key={index}
+                  >
                      {item.children ? (
                         <>
-                           <NavigationMenuTrigger>
+                           <NavigationMenuTrigger className="bg-primary text-secondary">
                               {item.title}
                            </NavigationMenuTrigger>
-                           <NavigationMenuContent>
+                           <NavigationMenuContent className="bg-primary text-secondary">
                               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                  {item.children.map((component, index) => (
                                     <li key={index} className="cursor-pointer">
-                                       <NavigationMenuLink asChild>
+                                       <NavigationMenuLink
+                                          asChild
+                                          className="bg-primary text-secondary"
+                                       >
                                           <a
                                              className={cn(
                                                 "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"

@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useRouter } from "next/navigation"
+import { ImSigma } from "react-icons/im"
 
 const AppLogo = () => {
    const router = useRouter()
@@ -10,14 +11,9 @@ const AppLogo = () => {
       router.push("/")
    }
    return (
-      <Image
-         src={"/eagle.png"}
-         width={100}
-         height={100}
-         alt="eagle"
-         onClick={goToHome}
-         className="cursor-pointer"
-      />
+      <div className="flex items-center justify-center text-center gap-4">
+         <ImSigma className="text-secondary md:cursor-pointer" fontSize={30} />
+      </div>
    )
 }
 
