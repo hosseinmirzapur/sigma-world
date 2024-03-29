@@ -37,6 +37,7 @@ const MobileHeader = () => {
                      <AccordionItem
                         value={`item-${index + 1}`}
                         className="mt-5"
+                        key={index + 1}
                      >
                         {item.children ? (
                            <>

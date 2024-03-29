@@ -65,6 +65,8 @@ const navItems: NavItem[] = [
          },
          {
             title: "خدمات بیمه",
+            description:
+               "تمامی دغدغه های گرفتن مدارک بیمه خود را به جهان سیگما بسپرید",
             href: "#",
             Icon: GrCertificate,
          },

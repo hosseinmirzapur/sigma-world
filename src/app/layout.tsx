@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils"
 import "./globals.css"
 import { HeaderComponent } from "./components/Header"
 import MobileHeader from "./components/MobileHeader"
+import Footer from "./components/Footer"
 
 export const metadata: Metadata = {
    title: "گستره جهان سیگما",
@@ -22,6 +23,7 @@ export default function RootLayout({
             <HeaderComponent />
             <MobileHeader />
             {children}
+            <Footer />
          </body>
       </html>
    )

@@ -39,7 +39,7 @@ export function HeaderComponent() {
                            <NavigationMenuContent>
                               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                  {item.children.map((component, index) => (
-                                    <li key={index}>
+                                    <li key={index} className="cursor-pointer">
                                        <NavigationMenuLink asChild>
                                           <a
                                              className={cn(
