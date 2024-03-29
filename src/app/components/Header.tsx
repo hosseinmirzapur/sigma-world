@@ -18,11 +18,11 @@ import navItems from "./navigations"
 
 export function HeaderComponent() {
    return (
-      <div className="flex w-full py-5 px-1 justify-between">
+      <div className="flex w-full py-5 px-2 justify-between">
          <AppLogo />
          <div className="flex">
             <NavigationMenu dir="rtl">
-               <NavigationMenuList className="">
+               <NavigationMenuList className="gap-4">
                   {navItems.map((item, index) => (
                      <NavigationMenuItem key={index}>
                         {item.children ? (
@@ -31,7 +31,7 @@ export function HeaderComponent() {
                                  {item.title}
                               </NavigationMenuTrigger>
                               <NavigationMenuContent>
-                                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                     {item.children.map((component, index) => (
                                        <ListItem
                                           key={index}
@@ -45,11 +45,12 @@ export function HeaderComponent() {
                               </NavigationMenuContent>
                            </>
                         ) : (
-                           <Link href={item.href}>
-                              <NavigationMenuLink>
-                                 {item.title}
-                              </NavigationMenuLink>
-                           </Link>
+                           <NavigationMenuLink
+                              href={item.href}
+                              className="text-sm"
+                           >
+                              {item.title}
+                           </NavigationMenuLink>
                         )}
                      </NavigationMenuItem>
                   ))}

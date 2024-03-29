@@ -1,19 +1,23 @@
 "use client"
 
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 const AppLogo = () => {
+   const router = useRouter()
+
+   const goToHome = () => {
+      router.push("/")
+   }
    return (
-      <div className="flex gap-4 align-middle">
-         <Image
-            src={"/eagle.png"}
-            width={100}
-            height={100}
-            alt="eagle"
-            className="align-middle"
-         />
-         <h3 className="align-middle">شرکت بازرگانی گستره جهان سیگما</h3>
-      </div>
+      <Image
+         src={"/eagle.png"}
+         width={100}
+         height={100}
+         alt="eagle"
+         onClick={goToHome}
+         className="cursor-pointer"
+      />
    )
 }
 
