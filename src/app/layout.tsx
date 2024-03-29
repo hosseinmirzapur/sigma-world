@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { cn } from "@/lib/utils"
 import "./globals.css"
 import { HeaderComponent } from "./components/Header"
+import MobileHeader from "./components/MobileHeader"
 
 export const metadata: Metadata = {
    title: "گستره جهان سیگما",
@@ -19,6 +20,7 @@ export default function RootLayout({
             className={cn("min-h-screen bg-background font-sans antialiased")}
          >
             <HeaderComponent />
+            <MobileHeader />
             {children}
          </body>
       </html>
