@@ -1,3 +1,9 @@
+import Hero from "./components/sections/Hero"
+
 export default function Home() {
-   return <></>
+   return (
+      <div className="flex w-11/12 mx-auto ">
+         <Hero />
+      </div>
+   )
 }

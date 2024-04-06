@@ -43,87 +43,100 @@ const navItems: NavItem[] = [
          {
             title: "خدمات گمرکی",
             href: "#",
-            description: "پیچیدگی های گمرکی خود را به متخصصین ما بسپارید",
+            description: "انجام کلیه امور گمرکی بدون واسطه",
             Icon: GiHomeGarage,
          },
          {
             title: "خدمات خرید و تامین کالا",
             href: "#",
-            description:
-               "به راحتی کالای خود را انتخاب کنید و تعرفه آن را مشاهده نمایید",
+            description: "یافتن، اعتبارسنجی و خرید کالا از منابع معتبر",
             Icon: MdProductionQuantityLimits,
          },
          {
             title: "خدمات حمل خارجی و داخلی",
             href: "#",
+            description: "کلیه امور مربوط به حمل داخلی و بین المللی",
             Icon: LiaTruckLoadingSolid,
          },
          {
             title: "حدمات ارزی بازرگانی",
             href: "#",
+            description: "مبادلات ارز و انجام امور خدمات ارزی بازرگانی",
             Icon: FaRegMoneyBill1,
          },
          {
             title: "خدمات بیمه",
-            description:
-               "تمامی دغدغه های گرفتن مدارک بیمه خود را به جهان سیگما بسپرید",
+            description: "ارائه کلیه خدمات مربوط به بیمه",
             href: "#",
             Icon: GrCertificate,
          },
          {
             title: "خدمات انبارداری و استریپ",
             href: "#",
+            description: "مدیریت بارگیری، نظارت امور، خدمات مکانیزه انبارداری",
             Icon: MdOutlineWarehouse,
          },
          {
             title: "خدمات تحقیق بازار صادراتی",
             href: "#",
             Icon: IoBookOutline,
+            description:
+               "ایجاد ارتباط و استفاده از استراتژی‌های بازاریابی جهت جذب مشتریان خارجی",
          },
          {
             title: "خدمات استاندارد، بازرسی و ایزو",
             href: "#",
             Icon: PiGlobeStandLight,
+            description: "بازرسی، اعتبار سنجی، مشاوره کسب گواهینامه ایزو",
          },
          {
             title: "خدمات مشاوره و آموزش",
             href: "#",
+            description: "آموزش و مشاوره در حوزه تجارت و سامانه‌ها",
             Icon: FaPeopleRoof,
          },
          {
             title: "خدمات بازاریابی بین الملل و مهندسی رشد محصول",
             href: "#",
             Icon: RxGlobe,
+            description: "مهندسی محصول، کشف بازار و تسهیل صادرات",
          },
          {
             title: "خدمات مشارکت مالی و امور مالی بین الملل",
             href: "#",
             Icon: PiHandshake,
+            description: "مشارکت و تامین مالی، ترانسفر پولی بین‌المللی",
          },
          {
             title: "خدمات نمایندگی و امور قرارداد",
             href: "#",
             Icon: GoGitBranch,
+            description:
+               "مذاکره ، عقد قرارداد، اخذ نمایندگی ، حل اختلافات بین‌المللی",
          },
          {
             title: "خدمات صندوق ضمانت صادرات",
             href: "#",
             Icon: GoInbox,
+            description: " ارائه مشاوره و خدمات جهت تسهیل صادرات",
          },
          {
             title: "خدمات صادرات کالا",
             href: "#",
             Icon: CiExport,
+            description: "انجام کل پروسه واردات بدون نیاز به واسطه‌",
          },
          {
             title: "خدمات واردات کالا",
             href: "#",
             Icon: CiImport,
+            description: "بازاریابی، یافتن خریدار، انجام کلیه امور صادرات",
          },
          {
             title: "خدمات ترخیص کالا",
             href: "#",
             Icon: BsUnlock,
+            description: "اخذ مجوز، اظهار و ترخیص کالا از گمرکات سراسر کشور",
          },
       ],
    },

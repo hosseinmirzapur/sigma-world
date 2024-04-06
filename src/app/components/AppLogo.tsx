@@ -12,7 +12,10 @@ const AppLogo = () => {
    }
    return (
       <div className="flex items-center justify-center text-center gap-4">
-         <ImSigma className="text-secondary md:cursor-pointer" fontSize={30} />
+         <ImSigma
+            className="text-secondary md:text-secondary md:cursor-pointer"
+            fontSize={30}
+         />
       </div>
    )
 }

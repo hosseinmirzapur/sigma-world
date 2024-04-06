@@ -24,7 +24,9 @@ export function HeaderComponent() {
 
    return (
       <div className="hidden md:flex w-full py-5 px-2 justify-between bg-primary text-secondary">
-         <AppLogo />
+         <div className="flex justify-center text-center pr-5">
+            <AppLogo />
+         </div>
          <NavigationMenu dir="rtl">
             <NavigationMenuList>
                {navItems.map((item, index) => (
@@ -37,7 +39,7 @@ export function HeaderComponent() {
                            <NavigationMenuTrigger className="bg-primary text-secondary">
                               {item.title}
                            </NavigationMenuTrigger>
-                           <NavigationMenuContent className="bg-primary text-secondary">
+                           <NavigationMenuContent className="bg-primary text-secondary max-h-[600px] overflow-x-auto">
                               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                  {item.children.map((component, index) => (
                                     <li key={index} className="cursor-pointer">

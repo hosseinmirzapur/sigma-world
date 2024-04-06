@@ -16,14 +16,16 @@ export default function RootLayout({
    children: React.ReactNode
 }>) {
    return (
-      <html lang="fa" dir="rtl">
-         <body
-            className={cn("min-h-screen bg-background font-sans antialiased")}
-         >
-            <HeaderComponent />
-            <MobileHeader />
+      <html lang="en" dir="rtl">
+         <body className={cn("bg-primary font-sans antialiased")}>
+            <div>
+               <HeaderComponent />
+               <MobileHeader />
+            </div>
             {children}
-            <Footer />
+            <div className="">
+               <Footer />
+            </div>
          </body>
       </html>
    )

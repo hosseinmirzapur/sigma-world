@@ -18,7 +18,7 @@ const MobileHeader = () => {
       <div className="md:hidden flex justify-between">
          <Sheet>
             <SheetTrigger asChild className="m-4">
-               <RxHamburgerMenu fontSize={30} />
+               <RxHamburgerMenu fontSize={30} className="text-secondary" />
             </SheetTrigger>
             <SheetContent>
                <Accordion

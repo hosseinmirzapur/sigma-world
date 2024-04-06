@@ -23,7 +23,8 @@
     "react-icons": "^5.0.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
-    "typeface-yekan": "^1.0.11"
+    "typeface-yekan": "^1.0.11",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/node": "^20",
