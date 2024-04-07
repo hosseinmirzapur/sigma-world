@@ -64,7 +64,7 @@ const MobileHeader = () => {
          <div className="flex justify-center items-center mx-2">
             <AppLogo />
          </div>
-         <div className="flex justify-center items-center">
+         <div className="flex justify-center items-center mt-1">
             <Profile />
          </div>
       </div>
