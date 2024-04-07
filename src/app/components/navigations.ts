@@ -1,22 +1,22 @@
 import { IconType } from "react-icons"
+
+import { FaChalkboardTeacher, FaRegMoneyBillAlt } from "react-icons/fa"
+import { IoCarSportOutline, IoPricetagOutline } from "react-icons/io5"
 import { BiSupport } from "react-icons/bi"
-import { BsUnlock } from "react-icons/bs"
-import { CiExport, CiImport } from "react-icons/ci"
-import { FaPeopleRoof, FaRegMoneyBill1 } from "react-icons/fa6"
-import { GiHomeGarage, GiTrade } from "react-icons/gi"
-import { GoGitBranch, GoInbox } from "react-icons/go"
+import { GiBuyCard, GiFarmTractor, GiPoliceOfficerHead } from "react-icons/gi"
 import { GrCertificate } from "react-icons/gr"
-import { IoIosCheckmarkCircleOutline } from "react-icons/io"
-import { IoBookOutline } from "react-icons/io5"
+import { GoLaw } from "react-icons/go"
 import {
-   LiaChalkboardTeacherSolid,
-   LiaTruckLoadingSolid,
-} from "react-icons/lia"
-import { LuFileSpreadsheet } from "react-icons/lu"
-import { MdOutlineWarehouse, MdProductionQuantityLimits } from "react-icons/md"
-import { PiCalculator, PiGlobeStandLight, PiHandshake } from "react-icons/pi"
-import { RiBaseStationLine } from "react-icons/ri"
-import { RxGlobe } from "react-icons/rx"
+   TbBuildingWarehouse,
+   TbPackageExport,
+   TbPackageImport,
+} from "react-icons/tb"
+import { FaMoneyBillTrendUp } from "react-icons/fa6"
+import { LiaTruckLoadingSolid } from "react-icons/lia"
+import { MdOutlineHealthAndSafety } from "react-icons/md"
+import { RiStockLine } from "react-icons/ri"
+import { BsRecycle } from "react-icons/bs"
+import { PiBooks } from "react-icons/pi"
 
 export interface NavItem {
    title: string
@@ -41,205 +41,118 @@ const navItems: NavItem[] = [
       href: "#",
       children: [
          {
-            title: "خدمات گمرکی",
+            title: "گمرکی",
             href: "#",
-            description: "انجام کلیه امور گمرکی بدون واسطه",
-            Icon: GiHomeGarage,
+            description: "انجام کلیه تشریفات گمرکی",
+            Icon: GiPoliceOfficerHead,
          },
          {
-            title: "خدمات خرید و تامین کالا",
+            title: "لجیستیک",
             href: "#",
-            description: "یافتن، اعتبارسنجی و خرید کالا از منابع معتبر",
-            Icon: MdProductionQuantityLimits,
-         },
-         {
-            title: "خدمات حمل خارجی و داخلی",
-            href: "#",
-            description: "کلیه امور مربوط به حمل داخلی و بین المللی",
             Icon: LiaTruckLoadingSolid,
          },
          {
-            title: "حدمات ارزی بازرگانی",
+            title: "بیمه",
             href: "#",
-            description: "مبادلات ارز و انجام امور خدمات ارزی بازرگانی",
-            Icon: FaRegMoneyBill1,
+            description: "صدور انواع بیمه نامه",
+            Icon: MdOutlineHealthAndSafety,
          },
          {
-            title: "خدمات بیمه",
-            description: "ارائه کلیه خدمات مربوط به بیمه",
+            title: "آموزش",
+            href: "#",
+            Icon: FaChalkboardTeacher,
+         },
+         {
+            title: "مجوز ها",
+            description: "ارائه مجوز های مختلف جهت واردات و صادرات",
             href: "#",
             Icon: GrCertificate,
          },
          {
-            title: "خدمات انبارداری و استریپ",
+            title: "استاندارد، بازرسی و محیط زیست",
             href: "#",
-            description: "مدیریت بارگیری، نظارت امور، خدمات مکانیزه انبارداری",
-            Icon: MdOutlineWarehouse,
-         },
-         {
-            title: "خدمات تحقیق بازار صادراتی",
-            href: "#",
-            Icon: IoBookOutline,
             description:
-               "ایجاد ارتباط و استفاده از استراتژی‌های بازاریابی جهت جذب مشتریان خارجی",
+               "اخذ مدارک استاندارد، بازرسی و محیط زیست برای صادرات و واردات انواع کالا",
+            Icon: BsRecycle,
          },
          {
-            title: "خدمات استاندارد، بازرسی و ایزو",
+            title: "انبارداری",
             href: "#",
-            Icon: PiGlobeStandLight,
-            description: "بازرسی، اعتبار سنجی، مشاوره کسب گواهینامه ایزو",
-         },
-         {
-            title: "خدمات مشاوره و آموزش",
-            href: "#",
-            description: "آموزش و مشاوره در حوزه تجارت و سامانه‌ها",
-            Icon: FaPeopleRoof,
-         },
-         {
-            title: "خدمات بازاریابی بین الملل و مهندسی رشد محصول",
-            href: "#",
-            Icon: RxGlobe,
-            description: "مهندسی محصول، کشف بازار و تسهیل صادرات",
-         },
-         {
-            title: "خدمات مشارکت مالی و امور مالی بین الملل",
-            href: "#",
-            Icon: PiHandshake,
-            description: "مشارکت و تامین مالی، ترانسفر پولی بین‌المللی",
-         },
-         {
-            title: "خدمات نمایندگی و امور قرارداد",
-            href: "#",
-            Icon: GoGitBranch,
-            description:
-               "مذاکره ، عقد قرارداد، اخذ نمایندگی ، حل اختلافات بین‌المللی",
-         },
-         {
-            title: "خدمات صندوق ضمانت صادرات",
-            href: "#",
-            Icon: GoInbox,
-            description: " ارائه مشاوره و خدمات جهت تسهیل صادرات",
-         },
-         {
-            title: "خدمات صادرات کالا",
-            href: "#",
-            Icon: CiExport,
-            description: "انجام کل پروسه واردات بدون نیاز به واسطه‌",
-         },
-         {
-            title: "خدمات واردات کالا",
-            href: "#",
-            Icon: CiImport,
-            description: "بازاریابی، یافتن خریدار، انجام کلیه امور صادرات",
-         },
-         {
-            title: "خدمات ترخیص کالا",
-            href: "#",
-            Icon: BsUnlock,
-            description: "اخذ مجوز، اظهار و ترخیص کالا از گمرکات سراسر کشور",
+            Icon: TbBuildingWarehouse,
+            description: "ارائه خدمات انبارداری برای واردات کالا",
          },
       ],
    },
    {
-      title: "تجارت بین الملل",
+      title: "تجارت داخلی",
       href: "#",
       children: [
          {
-            title: "بخش نامه های بازرگانی",
+            title: "خرید و فروش کالا از بورس",
             href: "#",
-            Icon: LuFileSpreadsheet,
+            Icon: RiStockLine,
          },
          {
-            title: "فیلم های آموزشی",
+            title: "خرید و فروش محصولات کشاورزی",
             href: "#",
-            Icon: LiaChalkboardTeacherSolid,
+            Icon: GiFarmTractor,
          },
          {
-            title: "اصطلاحات بازرگانی",
+            title: "خرید و فروش خودرو",
             href: "#",
-            Icon: GiTrade,
+            Icon: IoCarSportOutline,
          },
       ],
    },
    {
-      title: "سامانه های بازرگانی",
+      title: "تجارت خارجی",
       href: "#",
       children: [
          {
-            title: "سامانه جامع امور گمرکی",
+            title: "واردات انواع کالا های مجاز",
             href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
+            Icon: TbPackageImport,
          },
          {
-            title: "گمرک جمهوری اسلامی ایران",
+            title: "صادرات تمامی کالا ها",
             href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
+            Icon: TbPackageExport,
          },
          {
-            title: "سامانه جامع مدیریت کالا و خدمات پس از ترخیص",
+            title: "بازاریابی برای صادرات محصول",
             href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
+            Icon: IoPricetagOutline,
          },
          {
-            title: "سامانه جامع انبار ها و مراکز نگهداری کالا",
+            title: "مالی",
             href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
+            Icon: FaRegMoneyBillAlt,
          },
          {
-            title: "سامانه قرنطینه",
+            title: "جا به جایی مالی به صورت خرید کالا",
             href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
-         },
-         {
-            title: "سامانه تنظیم مقررات رادیویی",
-            href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
-         },
-         {
-            title: "سامانه انرژی اتمی",
-            href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
-         },
-         {
-            title: "سامانه یکپارچه کارت بازرگانی هوشمند",
-            href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
-         },
-         {
-            title: "سامانه جامع تجارت ایران",
-            href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
-         },
-         {
-            title: "سامانه غذا و دارو",
-            href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
-         },
-         {
-            title: "سامانه ارزی نیما",
-            href: "#",
-            Icon: IoIosCheckmarkCircleOutline,
+            Icon: GiBuyCard,
          },
       ],
    },
    {
-      title: "خدمات آنلاین",
+      title: "اختصاصی",
       href: "#",
       children: [
-         {
-            title: "استعلام آنلاین خدمات",
-            href: "#",
-            Icon: RiBaseStationLine,
-         },
-         {
-            title: "محاسبه آنلاین حقوق و عوارض گمرکی",
-            href: "#",
-            Icon: PiCalculator,
-         },
          {
             title: "مشاوره رایگان",
             href: "#",
             Icon: BiSupport,
+         },
+         {
+            title: "مشاهده قوانین و بخش نامه ها",
+            href: "#",
+            Icon: GoLaw,
+         },
+         {
+            title: "کتاب قوانین امور گمرکی",
+            href: "#",
+            Icon: PiBooks,
          },
       ],
    },
