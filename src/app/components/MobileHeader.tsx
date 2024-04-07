@@ -12,6 +12,7 @@ import {
    AccordionContent,
 } from "@/components/ui/accordion"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import Profile from "./Profile"
 
 const MobileHeader = () => {
    return (
@@ -62,6 +63,9 @@ const MobileHeader = () => {
          </Sheet>
          <div className="flex justify-center items-center mx-2">
             <AppLogo />
+         </div>
+         <div className="flex justify-center items-center">
+            <Profile />
          </div>
       </div>
    )

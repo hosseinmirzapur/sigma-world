@@ -14,6 +14,7 @@ import {
 import AppLogo from "./AppLogo"
 import navItems, { NavItem } from "./navigations"
 import { useRouter } from "next/navigation"
+import Profile from "./Profile"
 
 export function HeaderComponent() {
    const router = useRouter()
@@ -23,7 +24,20 @@ export function HeaderComponent() {
    }
 
    return (
-      <div className="hidden md:flex w-full py-5 px-2 justify-between bg-primary text-secondary">
+      <div
+         className="
+         hidden
+         md:flex
+         w-full
+         py-6
+         px-2
+         justify-between
+         bg-primary
+         text-secondary
+         shadow-md
+         shadow-black
+      "
+      >
          <div className="flex justify-center text-center pr-5">
             <AppLogo />
          </div>
@@ -94,7 +108,7 @@ export function HeaderComponent() {
                ))}
             </NavigationMenuList>
          </NavigationMenu>
-         <div />
+         <Profile />
       </div>
    )
 }

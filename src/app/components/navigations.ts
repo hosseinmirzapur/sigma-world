@@ -1,7 +1,11 @@
 import { IconType } from "react-icons"
 
 import { FaChalkboardTeacher, FaRegMoneyBillAlt } from "react-icons/fa"
-import { IoCarSportOutline, IoPricetagOutline } from "react-icons/io5"
+import {
+   IoCarSportOutline,
+   IoPricetagOutline,
+   IoSettingsOutline,
+} from "react-icons/io5"
 import { BiSupport } from "react-icons/bi"
 import { GiBuyCard, GiFarmTractor, GiPoliceOfficerHead } from "react-icons/gi"
 import { GrCertificate } from "react-icons/gr"
@@ -11,12 +15,12 @@ import {
    TbPackageExport,
    TbPackageImport,
 } from "react-icons/tb"
-import { FaMoneyBillTrendUp } from "react-icons/fa6"
 import { LiaTruckLoadingSolid } from "react-icons/lia"
 import { MdOutlineHealthAndSafety } from "react-icons/md"
 import { RiStockLine } from "react-icons/ri"
 import { BsRecycle } from "react-icons/bs"
 import { PiBooks } from "react-icons/pi"
+import { CgProfile } from "react-icons/cg"
 
 export interface NavItem {
    title: string
@@ -29,6 +33,12 @@ export interface NavChild {
    href: string
    description?: string
    Icon: IconType
+}
+
+export interface ProfileItem {
+   title: string
+   Icon: IconType
+   href: string
 }
 
 const navItems: NavItem[] = [
@@ -163,6 +173,19 @@ const navItems: NavItem[] = [
    {
       title: "ارتباط با ما",
       href: "#",
+   },
+]
+
+export const profileItems: ProfileItem[] = [
+   {
+      title: "حساب من",
+      href: "#",
+      Icon: CgProfile,
+   },
+   {
+      title: "تنظیمات",
+      href: "#",
+      Icon: IoSettingsOutline,
    },
 ]
 

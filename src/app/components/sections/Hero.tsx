@@ -34,7 +34,7 @@ const Hero = () => {
                      "ارائه دهنده خدمات اختصاصی برای نیاز های تجاری شما",
                      "رابط کاربری ساده برای تسهیل امور تجار و بازرگانان محترم",
                   ],
-                  wrapperClassName: "text-lg w-10/12 mx-auto",
+                  wrapperClassName: "text-lg w-9/12 md:w-10/12 mx-auto",
                }}
             />
          </div>
