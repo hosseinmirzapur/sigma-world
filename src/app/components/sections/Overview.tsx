@@ -18,7 +18,7 @@ const Item: React.FC<OverviewItem> = ({ Icon, count, title }) => (
       <div className="flex justify-center">
          <Icon fontSize={30} />
       </div>
-      <div className="flex gap-1 align-baseline items-baseline text-center justify-center">
+      <div className="flex align-baseline items-baseline text-center justify-center">
          <CountUp
             end={count}
             duration={3}
@@ -34,28 +34,31 @@ const Item: React.FC<OverviewItem> = ({ Icon, count, title }) => (
 
 const Overview = () => {
    return (
-      <div
-         className="
-            flex
-            flex-col
-            md:flex-row
-            justify-around
-            text-secondary
-            py-14
-            border-t-[1px]
-            border-b-[1px]
-            border-secondary
-            gap-16
-            md:gap-0
-        "
-      >
-         <Item title="مشتریان ما" count={1000} Icon={BsPersonPlus} />
-         <Item title="ترخیص کالا" count={350} Icon={BsBox} />
-         <Item
-            title="مشاوره بازرگانی"
-            count={1400}
-            Icon={RiCustomerService2Line}
-         />
+      <div className="py-4">
+         <div
+            className="
+                flex
+                flex-col
+                md:flex-row
+                justify-around
+                text-secondary
+                py-14
+                gap-16
+                md:gap-0
+                shadow-lg
+                shadow-black
+                rounded-md
+                bg-blue-950
+            "
+         >
+            <Item title="مشتریان ما" count={1000} Icon={BsPersonPlus} />
+            <Item title="ترخیص کالا" count={350} Icon={BsBox} />
+            <Item
+               title="مشاوره بازرگانی"
+               count={1400}
+               Icon={RiCustomerService2Line}
+            />
+         </div>
       </div>
    )
 }
