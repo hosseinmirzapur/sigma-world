@@ -24,6 +24,7 @@ const Item: React.FC<OverviewItem> = ({ Icon, count, title }) => (
             duration={3}
             className="text-4xl text-center"
             delay={0.5}
+            startOnMount
          />
          <FiPlus fontSize={20} />
       </div>
