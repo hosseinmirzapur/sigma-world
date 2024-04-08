@@ -1,4 +1,5 @@
 import Hero from "./components/sections/Hero"
+import Overview from "./components/sections/Overview"
 import WhyUs from "./components/sections/WhyUs"
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
       <div className="w-11/12 mx-auto space-y-10">
          <Hero />
          <WhyUs />
+         <Overview />
       </div>
    )
 }

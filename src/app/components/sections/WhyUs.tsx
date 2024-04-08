@@ -45,7 +45,7 @@ const Reason: React.FC<ReasonProps> = ({ Icon, description, title }) => (
 const WhyUs = () => {
    return (
       <div className="flex flex-col gap-14 text-secondary py-10">
-         <h1 className="flex justify-center items-center text-center text-3xl font-bold">
+         <h1 className="flex justify-center items-center text-center text-xl md:text-2xl lg:text-3xl font-bold">
             چرا گستره جهان سیگما را انتخاب کنید؟
          </h1>
          <div className="grid grid-cols-1 md:grid-cols-2 lg:flex flex-col lg:flex-row justify-center gap-8">
