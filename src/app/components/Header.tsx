@@ -34,7 +34,7 @@ export function HeaderComponent() {
          justify-between
          bg-primary
          text-secondary
-         shadow-md
+         shadow-sm
          shadow-black
       "
       >

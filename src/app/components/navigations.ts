@@ -57,7 +57,7 @@ const navItems: NavItem[] = [
             Icon: GiPoliceOfficerHead,
          },
          {
-            title: "لجیستیک",
+            title: "لجستیک",
             href: "#",
             Icon: LiaTruckLoadingSolid,
          },

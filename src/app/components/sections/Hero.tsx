@@ -7,8 +7,9 @@ const Hero = () => {
    return (
       <div className="my-10 relative">
          <div
-            className="text-secondary
-                    absolute
+            className="
+               text-secondary
+               absolute
 					text-center
 					top-[50%]
 					lg:top-[50%]
@@ -16,9 +17,9 @@ const Hero = () => {
 					translate-x-[-50%]
 					translate-y-[-50%]
 					w-full
-                "
+            "
          >
-            <p className="font-extrabold text-xl md:text-3xl lg:text-5xl opacity-100 mb-10">
+            <p className="font-extrabold text-xl md:text-3xl lg:text-6xl opacity-100 mb-10">
                شرکت بازرگانی گستره جهان سیگما
             </p>
 
@@ -34,7 +35,8 @@ const Hero = () => {
                      "ارائه دهنده خدمات اختصاصی برای نیاز های تجاری شما",
                      "رابط کاربری ساده برای تسهیل امور تجار و بازرگانان محترم",
                   ],
-                  wrapperClassName: "text-lg w-9/12 md:w-10/12 mx-auto",
+                  wrapperClassName:
+                     "text-lg md:text-xl w-9/12 md:w-10/12 mx-auto",
                }}
             />
          </div>
