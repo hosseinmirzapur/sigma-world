@@ -11,7 +11,7 @@ const AppLogo = () => {
    }
    return (
       <div
-         className="flex items-center justify-center text-center gap-4"
+         className="flex items-center justify-center text-center gap-4 cursor-pointer"
          onClick={goToHome}
       >
          <Image
