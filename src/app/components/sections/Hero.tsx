@@ -40,7 +40,7 @@ const Hero = () => {
                }}
             />
          </div>
-         <div>
+         <div className="flex items-center justify-center">
             <Image
                src={"/images/hero.jpg"}
                alt="hero-section"
