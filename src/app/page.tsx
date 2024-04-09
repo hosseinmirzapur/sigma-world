@@ -1,5 +1,6 @@
 import Hero from "./components/sections/Hero"
 import Overview from "./components/sections/Overview"
+import StartHere from "./components/sections/StartHere"
 import WhyUs from "./components/sections/WhyUs"
 
 export default function Home() {
@@ -8,6 +9,8 @@ export default function Home() {
          <Hero />
          <WhyUs />
          <Overview />
+         <StartHere />
+         <hr className="border-b-[1px] border-secondary" />
       </div>
    )
 }
