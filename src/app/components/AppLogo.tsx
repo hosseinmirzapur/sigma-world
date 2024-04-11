@@ -4,13 +4,28 @@ import { useTheme } from "next-themes"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 
-const AppLogo = () => {
+interface AppLogoProps {
+   darkMode?: boolean
+}
+
+const AppLogo: React.FC<AppLogoProps> = ({ darkMode }) => {
    const router = useRouter()
    const { theme } = useTheme()
 
    const goToHome = () => {
       router.push("/")
-      console.log(theme)
+   }
+
+   const handleImageSrc = (): string => {
+      if (darkMode === true || theme == "dark") {
+         return "/logos/sigma-world-black.png"
+      }
+
+      if (darkMode === false || theme == "light") {
+         return "/logos/sigma-world-white.png"
+      }
+
+      return "/logos/sigma-world-white.png"
    }
    return (
       <div
@@ -18,11 +33,7 @@ const AppLogo = () => {
          onClick={goToHome}
       >
          <Image
-            src={
-               theme && theme != "dark"
-                  ? "/logos/sigma-world-black.png"
-                  : "/logos/sigma-world-white.png"
-            }
+            src={handleImageSrc()}
             alt="sigma-world-logo"
             width={125}
             height={125}

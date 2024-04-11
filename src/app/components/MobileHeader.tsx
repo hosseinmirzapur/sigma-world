@@ -11,8 +11,14 @@ import {
    AccordionTrigger,
    AccordionContent,
 } from "@/components/ui/accordion"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import {
+   Sheet,
+   SheetContent,
+   SheetHeader,
+   SheetTrigger,
+} from "@/components/ui/sheet"
 import Profile from "./Profile"
+import DarkLight from "./DarkLight"
 
 const MobileHeader = () => {
    return (
@@ -24,6 +30,9 @@ const MobileHeader = () => {
                   className="dark:text-secondary text-primary"
                />
             </SheetTrigger>
+            <SheetHeader>
+               <DarkLight />
+            </SheetHeader>
             <SheetContent>
                <Accordion
                   type="single"
@@ -33,7 +42,7 @@ const MobileHeader = () => {
                   {navItems.map((item, index) => (
                      <AccordionItem
                         value={`item-${index + 1}`}
-                        className="mt-5"
+                        className="mt-5 text-primary"
                         key={index + 1}
                      >
                         {item.children ? (
@@ -48,7 +57,7 @@ const MobileHeader = () => {
                                  >
                                     <Link
                                        href={component.href}
-                                       className="flex flex-row gap-1"
+                                       className="flex flex-row gap-1 text-lg"
                                     >
                                        <component.Icon fontSize={16} />
                                        {component.title}

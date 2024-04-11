@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation"
 
 import { MdLightMode, MdDarkMode, MdLogout } from "react-icons/md"
 import { useTheme } from "next-themes"
+import DarkLight from "./DarkLight"
 
 const loggedInUser = {
    fullname: "HM",
@@ -22,19 +23,11 @@ const Profile = () => {
    // ** variables
    const [loggedIn, setLoggedIn] = useState(false)
    const router = useRouter()
-   const { setTheme, theme } = useTheme()
 
    // ** functions
    const toggleLogin = () => setLoggedIn(!loggedIn)
    const handleHref = (item: ProfileItem) => {
       router.push(item.href)
-   }
-   const toggleDarkMode = () => {
-      if (theme == "dark") {
-         setTheme("light")
-      } else {
-         setTheme("dark")
-      }
    }
 
    return !loggedIn ? (
@@ -51,41 +44,11 @@ const Profile = () => {
                ثبت نام
             </span>
          </div>
-         <div
-            className="flex justify-center items-center"
-            onClick={toggleDarkMode}
-         >
-            {theme && theme == "light" ? (
-               <MdDarkMode
-                  fontSize={24}
-                  className="cursor-pointer transition-all"
-               />
-            ) : (
-               <MdLightMode
-                  fontSize={24}
-                  className="cursor-pointer transition-all"
-               />
-            )}
-         </div>
+         <DarkLight />
       </div>
    ) : (
       <div className="flex gap-5 items-baseline">
-         <div
-            className="flex justify-center items-center"
-            onClick={toggleDarkMode}
-         >
-            {theme && theme == "light" ? (
-               <MdDarkMode
-                  fontSize={24}
-                  className="cursor-pointer transition-all"
-               />
-            ) : (
-               <MdLightMode
-                  fontSize={24}
-                  className="cursor-pointer transition-all"
-               />
-            )}
-         </div>
+         <DarkLight />
          <div className="dark:text-secondary dark:bg-primary text-primary bg-secondary pl-6">
             <DropdownMenu dir="rtl">
                <DropdownMenuTrigger className="border-none">
