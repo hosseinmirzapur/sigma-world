@@ -14,13 +14,24 @@ import {
 import {
    Sheet,
    SheetContent,
-   SheetHeader,
+   SheetFooter,
    SheetTrigger,
 } from "@/components/ui/sheet"
 import Profile from "./Profile"
-import DarkLight from "./DarkLight"
+import { MdDarkMode, MdLightMode } from "react-icons/md"
+import { useTheme } from "next-themes"
 
 const MobileHeader = () => {
+   const { theme, setTheme } = useTheme()
+
+   const toggleDarkMode = () => {
+      if (theme == "dark") {
+         setTheme("light")
+      } else {
+         setTheme("dark")
+      }
+   }
+
    return (
       <div className="md:hidden flex justify-between">
          <Sheet>
@@ -30,10 +41,7 @@ const MobileHeader = () => {
                   className="dark:text-secondary text-primary"
                />
             </SheetTrigger>
-            <SheetHeader>
-               <DarkLight />
-            </SheetHeader>
-            <SheetContent>
+            <SheetContent className="dark:bg-primary bg-secondary">
                <Accordion
                   type="single"
                   collapsible
@@ -42,7 +50,7 @@ const MobileHeader = () => {
                   {navItems.map((item, index) => (
                      <AccordionItem
                         value={`item-${index + 1}`}
-                        className="mt-5 text-primary"
+                        className="dark:text-secondary text-primary gap-5 flex flex-col mt-5"
                         key={index + 1}
                      >
                         {item.children ? (
@@ -71,6 +79,24 @@ const MobileHeader = () => {
                      </AccordionItem>
                   ))}
                </Accordion>
+               <SheetFooter>
+                  <div
+                     className="flex justify-center items-center"
+                     onClick={toggleDarkMode}
+                  >
+                     {theme && theme == "light" ? (
+                        <MdDarkMode
+                           fontSize={24}
+                           className="cursor-pointer transition-all"
+                        />
+                     ) : (
+                        <MdLightMode
+                           fontSize={24}
+                           className="cursor-pointer transition-all"
+                        />
+                     )}
+                  </div>
+               </SheetFooter>
             </SheetContent>
          </Sheet>
          <div className="flex justify-center items-center mx-2">
