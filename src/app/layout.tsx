@@ -4,6 +4,7 @@ import "./globals.css"
 import { HeaderComponent } from "./components/Header"
 import MobileHeader from "./components/MobileHeader"
 import Footer from "./components/Footer"
+import { ThemeProvider } from "./components/ThemeProvider"
 
 export const metadata: Metadata = {
    title: "گستره جهان سیگما",
@@ -16,16 +17,22 @@ export default function RootLayout({
    children: React.ReactNode
 }>) {
    return (
-      <html lang="en" dir="rtl">
-         <body className={cn("bg-primary font-sans antialiased")}>
-            <div>
-               <HeaderComponent />
-               <MobileHeader />
-            </div>
-            {children}
-            <div className="">
-               <Footer />
-            </div>
+      <html lang="en" dir="rtl" suppressHydrationWarning>
+         <body
+            className={cn(
+               "dark:bg-primary bg-secondary dark:text-secondary text-primary font-sans antialiased"
+            )}
+         >
+            <ThemeProvider attribute="class" defaultTheme="dark">
+               <div>
+                  <HeaderComponent />
+                  <MobileHeader />
+               </div>
+               {children}
+               <div className="">
+                  <Footer />
+               </div>
+            </ThemeProvider>
          </body>
       </html>
    )

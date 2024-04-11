@@ -5,10 +5,9 @@ import Typewriter from "typewriter-effect"
 
 const Hero = () => {
    return (
-      <div className="my-10 relative">
+      <div className="my-10 relative dark:text-secondary text-primary">
          <div
             className="
-               text-secondary
                absolute
 					text-center
 					top-[50%]
@@ -19,7 +18,7 @@ const Hero = () => {
 					w-full
             "
          >
-            <p className="font-extrabold text-xl md:text-3xl lg:text-6xl opacity-100 mb-10">
+            <p className="font-extrabold text-xl md:text-3xl lg:text-6xl mb-10">
                شرکت بازرگانی گستره جهان سیگما
             </p>
 
@@ -48,7 +47,7 @@ const Hero = () => {
                width={1600}
                height={500}
                draggable={false}
-               className="rounded-sm shadow-md shadow-black opacity-25"
+               className="rounded-sm shadow-md shadow-black dark:opacity-25 opacity-30"
             />
          </div>
       </div>

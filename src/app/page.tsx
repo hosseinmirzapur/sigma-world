@@ -1,7 +1,7 @@
-import Hero from "./components/sections/Hero"
-import Overview from "./components/sections/Overview"
-import StartHere from "./components/sections/StartHere"
-import WhyUs from "./components/sections/WhyUs"
+import Hero from "./components/sections/home/Hero"
+import Overview from "./components/sections/home/Overview"
+import StartHere from "./components/sections/home/StartHere"
+import WhyUs from "./components/sections/home/WhyUs"
 
 export default function Home() {
    return (

@@ -168,11 +168,11 @@ const navItems: NavItem[] = [
    },
    {
       title: "درباره ما",
-      href: "#",
+      href: "/about-us",
    },
    {
       title: "ارتباط با ما",
-      href: "#",
+      href: "/contact-us",
    },
 ]
 

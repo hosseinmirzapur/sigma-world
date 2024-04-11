@@ -1,13 +1,16 @@
 "use client"
 
+import { useTheme } from "next-themes"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 
 const AppLogo = () => {
    const router = useRouter()
+   const { theme } = useTheme()
 
    const goToHome = () => {
       router.push("/")
+      console.log(theme)
    }
    return (
       <div
@@ -15,7 +18,11 @@ const AppLogo = () => {
          onClick={goToHome}
       >
          <Image
-            src={"/logos/sigma-world-white.png"}
+            src={
+               theme && theme != "dark"
+                  ? "/logos/sigma-world-black.png"
+                  : "/logos/sigma-world-white.png"
+            }
             alt="sigma-world-logo"
             width={125}
             height={125}

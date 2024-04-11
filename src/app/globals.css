@@ -7,6 +7,7 @@
 
 * {
     font-family: 'Yekan' !important;
+    scroll-behavior: smooth !important;
 }
 
 ::-webkit-scrollbar {
@@ -20,7 +21,9 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    /* background: #888; */
+    --tw-text-opacity: 1;
+    background: rgb(34 197 94 / var(--tw-text-opacity));
   }
   
   /* Handle on hover */
