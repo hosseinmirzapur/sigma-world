@@ -58,7 +58,7 @@ export function HeaderComponent() {
                                        >
                                           <a
                                              className={cn(
-                                                "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-500 hover:text-primary"
+                                                "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-500 hover:text-primary dark:hover:text-muted-foreground"
                                              )}
                                           >
                                              <div className="flex gap-2 text-sm font-medium leading-none">

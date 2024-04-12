@@ -32,7 +32,7 @@ const Footer = () => {
             {/* Logo and Description */}
             <div className="flex-col w-full gap-10 hidden md:flex">
                <div className="flex justify-center items-center">
-                  <AppLogo darkMode={false} />
+                  <AppLogo darkMode />
                </div>
                <div className="w-11/12">
                   گستره جهان سیگما با هدف ارائه خدمات بین الملل برای تجار در

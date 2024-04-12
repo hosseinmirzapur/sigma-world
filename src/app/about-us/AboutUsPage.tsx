@@ -7,7 +7,7 @@ import Slogan from "../components/sections/about-us/Slogan"
 
 const AboutUsPage = () => {
    return (
-      <div className="flex flex-col gap-10 w-11/12 mx-auto text-secondary">
+      <div className="flex flex-col gap-10 w-11/12 mx-auto dark:text-secondary text-primary">
          <Slogan />
          <Benefits />
          <Introduction />

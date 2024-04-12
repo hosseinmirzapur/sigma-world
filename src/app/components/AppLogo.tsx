@@ -18,11 +18,11 @@ const AppLogo: React.FC<AppLogoProps> = ({ darkMode }) => {
 
    const handleImageSrc = (): string => {
       if (darkMode === true || theme == "dark") {
-         return "/logos/sigma-world-black.png"
+         return "/logos/sigma-world-white.png"
       }
 
       if (darkMode === false || theme == "light") {
-         return "/logos/sigma-world-white.png"
+         return "/logos/sigma-world-black.png"
       }
 
       return "/logos/sigma-world-white.png"
