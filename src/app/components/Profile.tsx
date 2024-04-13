@@ -7,13 +7,12 @@ import {
    DropdownMenuItem,
    DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { useState } from "react"
 import { ProfileItem, profileItems } from "./navigations"
 import { useRouter } from "next/navigation"
 
-import { MdLightMode, MdDarkMode, MdLogout } from "react-icons/md"
-import { useTheme } from "next-themes"
+import { MdLogout } from "react-icons/md"
 import DarkLight from "./DarkLight"
+import { useUserStore } from "@/zustand/hooks"
 
 const loggedInUser = {
    fullname: "HM",
@@ -21,21 +20,20 @@ const loggedInUser = {
 
 const Profile = () => {
    // ** variables
-   const [loggedIn, setLoggedIn] = useState(false)
    const router = useRouter()
+   const { isLoggedIn, login, logout } = useUserStore()
 
    // ** functions
-   const toggleLogin = () => setLoggedIn(!loggedIn)
    const handleHref = (item: ProfileItem) => {
       router.push(item.href)
    }
 
-   return !loggedIn ? (
+   return !isLoggedIn ? (
       <div className="flex flex-row-reverse gap-10">
          <div className="flex gap-2 dark:text-secondary text-primary justify-center items-center pl-6">
             <span
                className="hover:text-green-500 transition-all md:cursor-pointer"
-               onClick={toggleLogin}
+               onClick={login}
             >
                ورود
             </span>
@@ -47,7 +45,7 @@ const Profile = () => {
          <DarkLight />
       </div>
    ) : (
-      <div className="flex gap-5 items-baseline">
+      <div className="flex gap-10 items-baseline">
          <DarkLight />
          <div className="dark:text-secondary dark:bg-primary text-primary bg-secondary pl-6">
             <DropdownMenu dir="rtl">
@@ -60,7 +58,7 @@ const Profile = () => {
                      <AvatarFallback>{loggedInUser.fullname}</AvatarFallback>
                   </Avatar>
                </DropdownMenuTrigger>
-               <DropdownMenuContent className="dark:bg-primary dark:text-secondary text-primary bg-secondary">
+               <DropdownMenuContent className="dark:bg-primary dark:text-secondary text-primary bg-secondary ml-5">
                   {profileItems.map((item, index) => (
                      <DropdownMenuItem
                         key={index}
@@ -73,7 +71,7 @@ const Profile = () => {
                   ))}
                   <DropdownMenuItem
                      className="md:cursor-pointer flex gap-2 hover:bg-green-500 transition-all"
-                     onClick={toggleLogin}
+                     onClick={logout}
                   >
                      <MdLogout fontSize={20} />
                      خروج

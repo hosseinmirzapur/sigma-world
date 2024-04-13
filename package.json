@@ -30,7 +30,8 @@
       "tailwind-merge": "^2.2.2",
       "tailwindcss-animate": "^1.0.7",
       "typeface-yekan": "^1.0.11",
-      "typewriter-effect": "^2.21.0"
+      "typewriter-effect": "^2.21.0",
+      "zustand": "^4.5.2"
    },
    "devDependencies": {
       "@types/node": "^20",

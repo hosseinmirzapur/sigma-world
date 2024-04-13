@@ -21,6 +21,7 @@ import { RiStockLine } from "react-icons/ri"
 import { BsRecycle } from "react-icons/bs"
 import { PiBooks } from "react-icons/pi"
 import { CgProfile } from "react-icons/cg"
+import { RxDashboard } from "react-icons/rx"
 
 export interface NavItem {
    title: string
@@ -177,6 +178,11 @@ const navItems: NavItem[] = [
 ]
 
 export const profileItems: ProfileItem[] = [
+   {
+      title: "داشبورد",
+      href: "/dashboard",
+      Icon: RxDashboard,
+   },
    {
       title: "حساب من",
       href: "#",
