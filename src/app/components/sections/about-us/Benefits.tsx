@@ -57,7 +57,7 @@ const benefitItems: BenefitItem[] = [
 
 const Benefits = () => {
    return (
-      <div className="flex flex-col gap-10 mt-10">
+      <div className="flex flex-col gap-10 mt-20">
          <div className="text-2xl md:text-3xl lg:text-4xl font-bold">
             مزیت های شرکت گستره جهان سیگما
          </div>
