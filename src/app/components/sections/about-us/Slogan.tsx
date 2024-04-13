@@ -22,9 +22,8 @@ const Slogan = () => {
             <Image
                src={"/images/working.svg"}
                alt="working"
-               width={400}
-               height={400}
-               className="w-[1500px]"
+               width={1400}
+               height={1400}
             />
          </div>
       </div>

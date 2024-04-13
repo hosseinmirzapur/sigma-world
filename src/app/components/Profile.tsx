@@ -58,7 +58,7 @@ const Profile = () => {
                      <AvatarFallback>{loggedInUser.fullname}</AvatarFallback>
                   </Avatar>
                </DropdownMenuTrigger>
-               <DropdownMenuContent className="dark:bg-primary dark:text-secondary text-primary bg-secondary ml-5">
+               <DropdownMenuContent className="dark:bg-primary dark:text-secondary text-primary bg-secondary ml-5 border-green-500">
                   {profileItems.map((item, index) => (
                      <DropdownMenuItem
                         key={index}
