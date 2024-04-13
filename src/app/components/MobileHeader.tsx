@@ -50,7 +50,7 @@ const MobileHeader = () => {
                   {navItems.map((item, index) => (
                      <AccordionItem
                         value={`item-${index + 1}`}
-                        className="dark:text-secondary text-primary gap-5 flex flex-col mt-5"
+                        className="dark:text-secondary text-primary gap-5 flex flex-col mt-5 border-none"
                         key={index + 1}
                      >
                         {item.children ? (
@@ -65,10 +65,10 @@ const MobileHeader = () => {
                                  >
                                     <Link
                                        href={component.href}
-                                       className="flex flex-row gap-1 text-lg"
+                                       className="flex flex-row gap-3 text-lg items-baseline"
                                     >
                                        <component.Icon fontSize={16} />
-                                       {component.title}
+                                       <div>{component.title}</div>
                                     </Link>
                                  </AccordionContent>
                               ))}

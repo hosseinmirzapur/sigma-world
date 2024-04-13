@@ -13,7 +13,7 @@ interface QuickAccessItem {
 const quickAccessItems: QuickAccessItem[] = [
    {
       title: "درباره ما",
-      href: "#",
+      href: "/about-us",
       Icon: BsTruck,
    },
    {
