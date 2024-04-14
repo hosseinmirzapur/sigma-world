@@ -8,7 +8,7 @@ import {
 } from "react-icons/io5"
 import { BiSupport } from "react-icons/bi"
 import { GiBuyCard, GiFarmTractor, GiPoliceOfficerHead } from "react-icons/gi"
-import { GrCertificate } from "react-icons/gr"
+import { GrCertificate, GrServices } from "react-icons/gr"
 import { GoLaw } from "react-icons/go"
 import {
    TbBuildingWarehouse,
@@ -91,6 +91,11 @@ const navItems: NavItem[] = [
             href: "#",
             Icon: TbBuildingWarehouse,
             description: "ارائه خدمات انبارداری برای واردات کالا",
+         },
+         {
+            title: "خدمات پس از فروش",
+            href: "#",
+            Icon: GrServices,
          },
       ],
    },

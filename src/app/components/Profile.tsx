@@ -13,6 +13,8 @@ import { useRouter } from "next/navigation"
 import { MdLogout } from "react-icons/md"
 import DarkLight from "./DarkLight"
 import { useUserStore } from "@/zustand/hooks"
+import LoginDialog from "./modals/LoginDialog"
+import RegisterDialog from "./modals/RegisterDialog"
 
 const loggedInUser = {
    fullname: "HM",
@@ -21,7 +23,7 @@ const loggedInUser = {
 const Profile = () => {
    // ** variables
    const router = useRouter()
-   const { isLoggedIn, login, logout } = useUserStore()
+   const { isLoggedIn, logout } = useUserStore()
 
    // ** functions
    const handleHref = (item: ProfileItem) => {
@@ -31,16 +33,21 @@ const Profile = () => {
    return !isLoggedIn ? (
       <div className="flex flex-row-reverse gap-10">
          <div className="flex gap-2 dark:text-secondary text-primary justify-center items-center pl-6">
-            <span
-               className="hover:text-green-500 transition-all md:cursor-pointer"
-               onClick={login}
-            >
-               ورود
-            </span>
+            <LoginDialog
+               Trigger={
+                  <span className="hover:text-green-500 transition-all md:cursor-pointer">
+                     ورود
+                  </span>
+               }
+            />
             <span>/</span>
-            <span className="hover:text-green-500 transition-all md:cursor-pointer">
-               ثبت نام
-            </span>
+            <RegisterDialog
+               Trigger={
+                  <span className="hover:text-green-500 transition-all md:cursor-pointer">
+                     ثبت نام
+                  </span>
+               }
+            />
          </div>
          <DarkLight />
       </div>
