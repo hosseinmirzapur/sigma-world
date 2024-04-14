@@ -18,7 +18,7 @@ const RegisterDialog: React.FC<LoginDialogProps> = ({ Trigger }) => {
    return (
       <Dialog>
          <DialogTrigger children={Trigger} />
-         <DialogContent className="h-[500px] w-11/12 mx-auto md:h-auto overflow-auto">
+         <DialogContent className="h-[500px] w-11/12 mx-auto md:h-auto overflow-auto rounded-lg border-none">
             <DialogHeader>
                <DialogTitle className="text-center">
                   در جهان سیگما ثبت نام کنید
