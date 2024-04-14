@@ -18,13 +18,24 @@ const RegisterDialog: React.FC<LoginDialogProps> = ({ Trigger }) => {
    return (
       <Dialog>
          <DialogTrigger children={Trigger} />
-         <DialogContent>
+         <DialogContent className="h-[400px] w-11/12 mx-auto md:h-auto overflow-auto">
             <DialogHeader>
                <DialogTitle className="text-center">
                   در جهان سیگما ثبت نام کنید
                </DialogTitle>
             </DialogHeader>
-            <div className="flex flex-col md:flex-row mx-auto justify-between gap-4">
+            <div
+               className="
+                  flex
+                  flex-col
+                  md:flex-row
+                  mx-auto
+                  justify-between
+                  gap-10
+                  md:gap-6
+                  lg:gap-3
+               "
+            >
                <RegisterForm />
                <Image
                   src={"/images/register.svg"}
