@@ -32,10 +32,11 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ userType }) => {
       },
    })
 
-   const { login } = useUserStore()
+   const { login, setToken } = useUserStore()
 
    const onSubmit = (values: z.infer<typeof registerForm>) => {
       login()
+      setToken("abcd")
    }
 
    return (

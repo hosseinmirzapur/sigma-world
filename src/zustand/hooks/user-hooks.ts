@@ -16,6 +16,11 @@ export const useUserStore = create<UserStore>()(
                set(() => ({
                   isLoggedIn: false,
                })),
+            token: "",
+            setToken: (token: string) =>
+               set(() => ({
+                  token,
+               })),
          }),
          {
             name: "userStore",

@@ -25,10 +25,11 @@ const LoginForm = () => {
       },
    })
 
-   const { login } = useUserStore()
+   const { login, setToken } = useUserStore()
 
    const onSubmit = (values: z.infer<typeof loginForm>) => {
       login()
+      setToken("abcd")
    }
 
    return (
