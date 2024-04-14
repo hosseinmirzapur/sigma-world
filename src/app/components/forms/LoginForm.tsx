@@ -28,7 +28,6 @@ const LoginForm = () => {
    const { login } = useUserStore()
 
    const onSubmit = (values: z.infer<typeof loginForm>) => {
-      console.log(values)
       login()
    }
 

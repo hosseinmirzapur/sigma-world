@@ -14,7 +14,12 @@ export const registerForm = z.object({
          message: "رمز عبور باید حداقل ۸ رقمی باشد",
       }),
    fullName: z.string({ required_error }),
-   nationalCode: z.string({ required_error }).length(10, {
-      message: "کد ملی باید ده رقمی باشد",
-   }),
+   nationalCode: z
+      .string()
+      .length(10, {
+         message: "کد ملی باید ده رقمی باشد",
+      })
+      .optional(),
+   registerCode: z.number(),
+   userType: z.enum(["real", "legal"], { required_error }),
 })

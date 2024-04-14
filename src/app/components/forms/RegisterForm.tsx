@@ -16,7 +16,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useUserStore } from "@/zustand/hooks"
 
-const RegisterForm = () => {
+interface RegisterFormProps {
+   userType: "real" | "legal"
+}
+
+const RegisterForm: React.FC<RegisterFormProps> = ({ userType }) => {
    const form = useForm<z.infer<typeof registerForm>>({
       resolver: zodResolver(registerForm),
       defaultValues: {
@@ -24,13 +28,13 @@ const RegisterForm = () => {
          password: "",
          fullName: "",
          nationalCode: "",
+         userType,
       },
    })
 
    const { login } = useUserStore()
 
    const onSubmit = (values: z.infer<typeof registerForm>) => {
-      console.log(values)
       login()
    }
 
@@ -88,23 +92,44 @@ const RegisterForm = () => {
                   </FormItem>
                )}
             />
-            <FormField
-               control={form.control}
-               name="nationalCode"
-               render={({ field }) => (
-                  <FormItem>
-                     <FormLabel className="text-lg">کد ملی</FormLabel>
-                     <FormControl>
-                        <Input
-                           placeholder="9876543210"
-                           className="text-primary"
-                           {...field}
-                        />
-                     </FormControl>
-                     <FormMessage />
-                  </FormItem>
-               )}
-            />
+            {userType === "real" ? (
+               <FormField
+                  control={form.control}
+                  name="nationalCode"
+                  render={({ field }) => (
+                     <FormItem>
+                        <FormLabel className="text-lg">کد ملی</FormLabel>
+                        <FormControl>
+                           <Input
+                              placeholder="9876543210"
+                              className="text-primary"
+                              {...field}
+                           />
+                        </FormControl>
+                        <FormMessage />
+                     </FormItem>
+                  )}
+               />
+            ) : (
+               <FormField
+                  control={form.control}
+                  name="registerCode"
+                  render={({ field }) => (
+                     <FormItem>
+                        <FormLabel className="text-lg">شناسه ثبت</FormLabel>
+                        <FormControl>
+                           <Input
+                              placeholder="9876543210"
+                              className="text-primary"
+                              {...field}
+                           />
+                        </FormControl>
+                        <FormMessage />
+                     </FormItem>
+                  )}
+               />
+            )}
+
             <div className="flex justify-center">
                <Button
                   type="submit"
