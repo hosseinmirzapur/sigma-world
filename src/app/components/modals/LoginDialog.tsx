@@ -20,7 +20,7 @@ const LoginDialog: React.FC<LoginDialogProps> = ({ Trigger }) => {
    return (
       <Dialog>
          <DialogTrigger children={Trigger} />
-         <DialogContent className="h-[400px] w-11/12 mx-auto md:h-auto overflow-auto">
+         <DialogContent className="h-[500px] w-11/12 mx-auto md:h-auto overflow-auto">
             <DialogHeader>
                <DialogTitle className="text-center">
                   وارد داشبورد کاربری خود شوید
