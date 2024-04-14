@@ -34,14 +34,14 @@ const RegisterDialog: React.FC<LoginDialogProps> = ({ Trigger }) => {
                   <TabsTrigger
                      value="real"
                      onClick={() => setUserType("real")}
-                     className="w-40"
+                     className="w-30 md:w-35 lg:w-40"
                   >
                      حقیقی
                   </TabsTrigger>
                   <TabsTrigger
                      value="legal"
                      onClick={() => setUserType("legal")}
-                     className="w-40"
+                     className="w-30 md:w-35 lg:w-40"
                   >
                      حقوقی
                   </TabsTrigger>
