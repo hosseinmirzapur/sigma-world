@@ -23,9 +23,9 @@ const MobileSidebar = () => {
    return (
       <div className="lg:hidden flex justify-start mr-2">
          <Sheet>
-            <SheetTrigger className="flex gap-2">
+            <SheetTrigger className="flex gap-2 w-11/12 mx-auto mt-4 text-lg">
                <GoSidebarCollapse fontSize={24} />
-               دسترسی به منو
+               دسترسی به منوی کاربری
             </SheetTrigger>
             <SheetContent className="bg-secondary dark:bg-primary">
                <SheetHeader>
@@ -34,7 +34,7 @@ const MobileSidebar = () => {
                <div>
                   <Accordion type="single" className="flex flex-col gap-4">
                      <Link href={"/dashboard"} className="flex gap-2 mt-5">
-                        <GoHome fontSize={20} />
+                        <GoHome fontSize={24} />
                         <div className="text-center w-full hover:text-green-500 transition-colors text-lg">
                            داشبورد
                         </div>
