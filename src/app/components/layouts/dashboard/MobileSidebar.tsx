@@ -32,10 +32,10 @@ const MobileSidebar = () => {
                   <SheetTitle>گستره جهان سیگما</SheetTitle>
                </SheetHeader>
                <div>
-                  <Accordion type="multiple" className="flex flex-col gap-4">
+                  <Accordion type="single" className="flex flex-col gap-4">
                      <Link href={"/dashboard"} className="flex gap-2 mt-5">
                         <GoHome fontSize={20} />
-                        <div className="text-center w-full hover:text-green-500 transition-colors">
+                        <div className="text-center w-full hover:text-green-500 transition-colors text-lg">
                            داشبورد
                         </div>
                      </Link>
