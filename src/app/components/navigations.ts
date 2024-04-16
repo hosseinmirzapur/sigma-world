@@ -6,9 +6,14 @@ import {
    IoPricetagOutline,
    IoSettingsOutline,
 } from "react-icons/io5"
-import { BiSupport } from "react-icons/bi"
+import { BiSearch, BiSupport } from "react-icons/bi"
 import { GiBuyCard, GiFarmTractor, GiPoliceOfficerHead } from "react-icons/gi"
-import { GrCertificate, GrServices } from "react-icons/gr"
+import {
+   GrCertificate,
+   GrDocumentText,
+   GrServices,
+   GrStatusUnknown,
+} from "react-icons/gr"
 import { GoLaw } from "react-icons/go"
 import {
    TbBuildingWarehouse,
@@ -16,11 +21,16 @@ import {
    TbPackageImport,
 } from "react-icons/tb"
 import { LiaTruckLoadingSolid } from "react-icons/lia"
-import { MdOutlineHealthAndSafety } from "react-icons/md"
-import { RiStockLine } from "react-icons/ri"
+import {
+   MdCorporateFare,
+   MdListAlt,
+   MdOutlineHealthAndSafety,
+   MdOutlineInventory2,
+} from "react-icons/md"
+import { RiMoneyDollarCircleLine, RiStockLine } from "react-icons/ri"
 import { BsRecycle } from "react-icons/bs"
 import { PiBooks } from "react-icons/pi"
-import { CgProfile } from "react-icons/cg"
+import { CgImport, CgProfile } from "react-icons/cg"
 import { RxDashboard } from "react-icons/rx"
 
 export interface NavItem {
@@ -197,6 +207,77 @@ export const profileItems: ProfileItem[] = [
       title: "تنظیمات",
       href: "#",
       Icon: IoSettingsOutline,
+   },
+]
+
+export const dashboardItems: NavItem[] = [
+   {
+      title: "عملیات شناسه کالا",
+      href: "#",
+      children: [
+         {
+            title: "فهرست کالا های وارداتی",
+            href: "#",
+            Icon: CgImport,
+         },
+         {
+            title: "جستجوی کالا",
+            href: "#",
+            Icon: BiSearch,
+         },
+      ],
+   },
+   {
+      title: "عملیات سفارش",
+      href: "#",
+      children: [
+         {
+            title: "اسناد و مدارک",
+            href: "#",
+            Icon: GrDocumentText,
+         },
+         {
+            title: "لیست همه سفارشات",
+            href: "#",
+            Icon: MdListAlt,
+         },
+      ],
+   },
+   {
+      title: "استعلامات",
+      href: "#",
+      children: [
+         {
+            title: "عملیات کالا",
+            href: "#",
+            Icon: MdOutlineInventory2,
+         },
+         {
+            title: "عملیات سفارش",
+            href: "#",
+            Icon: GrStatusUnknown,
+         },
+         {
+            title: "عملیات ارزی",
+            href: "#",
+            Icon: RiMoneyDollarCircleLine,
+         },
+         {
+            title: "عملیات لجستیک",
+            href: "#",
+            Icon: LiaTruckLoadingSolid,
+         },
+         {
+            title: "عملیات گمرکی",
+            href: "#",
+            Icon: MdCorporateFare,
+         },
+         {
+            title: "عملیات بیمه نامه",
+            href: "#",
+            Icon: MdOutlineHealthAndSafety,
+         },
+      ],
    },
 ]
 
