@@ -6,7 +6,9 @@ const nextConfig = {
             hostname: "https://github.com",
          },
       ],
+      unoptimized: true,
    },
+   output: "export",
 }
 
 export default nextConfig
